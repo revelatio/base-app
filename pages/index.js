@@ -1,10 +1,13 @@
 import React from 'react'
 import Dummy from '../components/Dummy'
+import Link from 'next/link'
 
 const Index = ({url}) => (
   <div className='index'>
     <Dummy>
-      Welcome to <a href='http://www.revelat.io'>revelat.io</a>
+      Welcome to base-app
+      <Link to='/' as='/index/hello'><a>Hello</a></Link>
+
       {url.query.id &&
         <p>{url.query.id}</p>
       }
