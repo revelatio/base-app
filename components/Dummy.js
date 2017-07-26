@@ -2,7 +2,7 @@ import React from 'react'
 
 const Dummy = ({children}) => (
   <div className='Dummy'>
-    <img src='/static/img/revelatio.png' />
+    {/*<img src='/static/img/revelatio.png' />*/}
     {children}
 
     {/* language=CSS */}

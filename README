@@ -1,13 +1,13 @@
 # base-app
 
-This is the base app for a single page application. It's based on 
+This is a starter app for a single page application. It's based on 
 **Nextjs** (https://github.com/zeit/next.js/) and integrates the basic 
 essential features to start working on it. 
 
 - Serving **Nextjs** app over express server (Only for local development)
 - Parametrized routing (with example)
 - Serving static files under /static
-- Exports Serverless handler
+- Exports Serverless handler (GCF)
 - Include styled-jsx by default (You can later decide for a different tool)
-- No Flux library included.
-- No tests integrated
+- No Flux library included. (Up to you)
+- No tests integrated (Up to you)

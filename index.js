@@ -1,5 +1,5 @@
 const next = require('next')
-const { router, get } = require('microrouter')
+const routes = require('./routes')
 
 const slasher = handler => (req, res) => {
   if (req.url === '') {
@@ -11,15 +11,10 @@ const slasher = handler => (req, res) => {
 
 const createApp = dev => {
   const app = next({ dev })
-  const handler = app.getRequestHandler()
-
-  const routes = router(
-    get('/index/:id', (req, res) => app.render(req, res, '/', req.params)),
-    handler
-  )
+  const handler = routes.getRequestHandler(app)
 
   return app.prepare()
-    .then(() => slasher(routes))
+    .then(() => slasher(handler))
 }
 
 const serverlessHandler = (req, res) => createApp(false).then(handler => handler(req, res))

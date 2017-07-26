@@ -4,23 +4,14 @@ import Header from '../components/Header'
 import { Link } from '../routes'
 import ScreenFrame from '../components/ScreenFrame'
 
-const Index = ({url}) => (
+const Resource = ({url}) => (
   <ScreenFrame>
-    <Header title='Index page'/>
+    <Header title={`Resource ${url.query.id}`} />
 
     <Dummy>
-      Welcome to base-app
-      <Link route='index' params={{id: 'hello-world'}}>
-        <a>Hello</a>
-      </Link>
+      {url.query.id}
 
-      <Link route='resource' params={{id: 'my-fancy-resource'}}>
-        <a>Resource</a>
-      </Link>
-
-      {url.query.id &&
-        <p>{url.query.id}</p>
-      }
+      <Link route='/'><a>Go back</a></Link>
     </Dummy>
 
     {/* language=CSS */}
@@ -37,4 +28,4 @@ const Index = ({url}) => (
   </ScreenFrame>
 )
 
-export default Index
+export default Resource
