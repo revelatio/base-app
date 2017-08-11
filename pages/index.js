@@ -2,10 +2,11 @@ import React from 'react'
 import Dummy from '../components/Dummy'
 import Header from '../components/Header'
 import { Link } from '../routes'
-import ScreenFrame from '../components/ScreenFrame'
+import { ScreenFrame, PageFrame } from 'awesome-components'
 
 const Index = ({url}) => (
   <ScreenFrame>
+    <PageFrame>
     <Header title='Index page'/>
 
     <Dummy>
@@ -23,6 +24,7 @@ const Index = ({url}) => (
       }
     </Dummy>
 
+    </PageFrame>
     {/* language=CSS */}
     <style jsx>{`
       a {

@@ -2,10 +2,11 @@ import React from 'react'
 import Dummy from '../components/Dummy'
 import Header from '../components/Header'
 import { Link } from '../routes'
-import ScreenFrame from '../components/ScreenFrame'
+import { ScreenFrame, PageFrame } from 'awesome-components'
 
 const Resource = ({url}) => (
   <ScreenFrame>
+    <PageFrame>
     <Header title={`Resource ${url.query.id}`} />
 
     <Dummy>
@@ -13,6 +14,7 @@ const Resource = ({url}) => (
 
       <Link route='/'><a>Go back</a></Link>
     </Dummy>
+    </PageFrame>
 
     {/* language=CSS */}
     <style jsx>{`
