@@ -1,6 +1,6 @@
 {
   "name": "base-app",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Base app",
   "main": "index.js",
   "scripts": {
@@ -11,15 +11,16 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "awesome-components": "^0.6.0",
-    "babel-runtime": "^6.25.0",
-    "express": "^4.15.4",
-    "next": "^3.0.3",
-    "next-routes": "^1.0.40",
-    "prop-types": "^15.5.10",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
-    "regenerator-runtime": "^0.10.5",
-    "styled-jsx": "^1.0.10"
+    "babel-runtime": "^6.26.0",
+    "express": "^4.16.2",
+    "next": "^4.1.0",
+    "next-routes": "^1.1.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "regenerator-runtime": "^0.11.0",
+    "styled-jsx": "^2.1.2"
+  },
+  "devDependencies": {
+    "standard": "^10.0.3"
   }
 }

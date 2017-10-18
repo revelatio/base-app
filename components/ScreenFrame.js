@@ -4,18 +4,19 @@ const ScreenFrame = ({children}) => (
   <div className='ScreenFrame'>
     {children}
 
+    {/* language=CSS */}
     <style jsx>{`
       .ScreenFrame {
-        font-family: 'Helvetica', 'Arial', sans-serif;
         position: absolute;
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
+        background: white;
         display: flex;
-        background-color: #f8f8f8;
         flex-direction: column;
-        justify-content: center;
+        align-items: center;
+        justify-content: flex-start;
       }
     `}</style>
   </div>

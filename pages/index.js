@@ -2,27 +2,28 @@ import React from 'react'
 import Dummy from '../components/Dummy'
 import Header from '../components/Header'
 import { Link } from '../routes'
-import { ScreenFrame, PageFrame } from 'awesome-components'
+import ScreenFrame from '../components/ScreenFrame'
+import PageFrame from '../components/PageFrame'
 
 const Index = ({url}) => (
   <ScreenFrame>
     <PageFrame>
-    <Header title='Index page'/>
+      <Header title='Index page' />
 
-    <Dummy>
-      Welcome to base-app
-      <Link route='index' params={{id: 'hello-world'}}>
-        <a>Hello</a>
-      </Link>
+      <Dummy>
+        Welcome to base-app
+        <Link route='index' params={{id: 'hello-world'}}>
+          <a>Hello</a>
+        </Link>
 
-      <Link route='resource' params={{id: 'my-fancy-resource'}}>
-        <a>Resource</a>
-      </Link>
+        <Link route='resource' params={{id: 'my-fancy-resource'}}>
+          <a>Resource</a>
+        </Link>
 
-      {url.query.id &&
+        {url.query.id &&
         <p>{url.query.id}</p>
-      }
-    </Dummy>
+        }
+      </Dummy>
 
     </PageFrame>
     {/* language=CSS */}
